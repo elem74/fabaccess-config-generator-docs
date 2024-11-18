@@ -1,6 +1,3 @@
-!!! tip "CSV-Datei"
-
-
 
 Im Kapitel Grundlagen wurde die CSV bereits auszugsweise gezeigt. Hier der grundsätzliche Umgang mit der CSV-Datei und die weiteren Felder der CSV-Datei erklärt anhand der einfachen Beispielwerkstatt erklärt.
 
