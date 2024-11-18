@@ -1,0 +1,1 @@
+Dokumentation des [https://github.com/elem74/fabaccess-config-generator](Fabaccess Config Generator)

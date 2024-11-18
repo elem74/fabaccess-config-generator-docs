@@ -1,0 +1,68 @@
+# Grundeinstellungen
+site_name: FabAccess Config Generator
+use_directory_urls: false
+extra_css:
+  - style.css
+
+# Theme inkl. Spracheinstellugn
+theme:
+  name: material
+  language: de
+  features:
+    - navigation.sections
+    - navigation.footer
+    - content.footnote.tooltips
+  plugins:
+    - offline
+    - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - mdx_truly_sane_lists
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - footnotes
+
+nav:
+  - Home: index.md
+  # - Quickstart: quickstart.md
+  - Introduction:
+    - Basics: introduction/basics.md
+    - Working with the CSV: introduction/working_with_csv.md
+    - Script Usage: introduction/using_script.md
+  - Reference:
+    - Areas & Roles: reference/areas_roles.md
+    - CSV-File: reference/csv.md
+    - actors.ini: reference/actors.md
+    - settings.ini: reference/settings.md
+
+plugins:
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: de
+          default: true
+          name: Deutsch
+          build: true
+          nav_translations:
+            Home: Startseite
+            Basics: Grundlagen
+            Working with the CSV: Arbeiten mit der CSV
+            Script Usage: Skript-Nutzung
+            Reference: Referenz
+            Areas & Roles: Bereiche & Rollen
+            CSV-File: CSV-Datei
+        - locale: en
+          name: English
+          build: true
