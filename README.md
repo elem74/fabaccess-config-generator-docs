@@ -1,1 +1,1 @@
-Dokumentation des [https://github.com/elem74/fabaccess-config-generator](Fabaccess Config Generator)
+Dokumentation des [Fabaccess-Config-Generator](https://github.com/elem74/fabaccess-config-generator)
