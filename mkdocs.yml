@@ -57,6 +57,7 @@ plugins:
           build: true
           nav_translations:
             Home: Startseite
+            Introduction: Einführung
             Basics: Grundlagen
             Working with the CSV: Arbeiten mit der CSV
             Script Usage: Skript-Nutzung
