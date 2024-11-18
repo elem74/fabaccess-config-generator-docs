@@ -31,6 +31,10 @@ Dieser Vorgang funktioniert wie folgt:
 - Dabei werden alle vom Skript erzeugten Daten werden zwischen den Platzhaltern `-- ||| GENERATOR START` und `-- ||| GENERATOR END` eingefügt. Bestehende Inhalte zwischen diesen Platzhaltern werden ignoriert.
 - Die Datei `bffh.dhall` wird am Ende vollständig neu geschrieben.
 
+<br>
+Ein Vorlage für eine entsprechend angepasste `bffh.dhall` befindet sich im Unterordner `docs` des FabAccess Config Generator.
+
+
 !!! tip
 
     Backups anlegen verschafft Gelassenheit.
