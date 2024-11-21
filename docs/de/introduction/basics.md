@@ -7,27 +7,27 @@ Im Folgenden werden alle Konzepte/ Elemente anhand einer Beispielwerkstatt erlä
 
 Das Ordnungskonzept beinhaltet die folgende Unterteilung:
 
-| Element                                            | Zweck( Umfang)                                                  | Beinhaltet Maschinen |
-| -------------------------------------------------- | ------------------------------------------------------ | -------------------- |
-| <font color="Blue"><b>Domäne</b>            | Die ganze Werkstatt.                                   | :material-close:     |
-| <font color="purple"><b>Bereich</b>         | Ein Bereich/ Gewerk ein Werkstatt (z.B. Holzwerkstatt, Elektronik).          | :material-check:     |
-| <font color="OrangeRed"><b>Unterbereich</b> | Unterbereich eines Bereichs/ Gewerks (z.B. 3D-Druck im Elektronik). | :material-check:     |
+| Element                                            | Zweck/ Umfang                                                       | Beinhaltet Maschinen |
+| -------------------------------------------------- | ------------------------------------------------------------------- | -------------------- |
+| <font color="Blue"><b>Domäne</b></font>            | Die ganze Werkstatt.                                                | :material-close:     |
+| <font color="purple"><b>Bereich</b></font>         | Ein Bereich/ Gewerk ein Werkstatt (z.B. Holzwerkstatt, Elektronik). | :material-check:     |
+| <font color="OrangeRed"><b>Unterbereich</b></font> | Unterbereich eines Bereichs/ Gewerks (z.B. 3D-Druck im Elektronik). | :material-check:     |
 
 Unter Nutzung dieser Elemente sieht unsere Beispielwerkstatt so aus:
 
 ```mermaid
 flowchart TD
-    root["<b><font color="Blue" size="5px">Domäne<br>Meine Werkstatt</b>"]
+    root["<b><font color="Blue" size="5px">Domäne<br>Meine Werkstatt</b></font>"]
     root ---- area1
     root ---- area2
     area2 ---- area2_1
     area2 ---- area2_2
 
-    area1["<b><font color="purple" size="5px">Bereich<br>Holzwerkstatt</b><br><br><small>Kreissäge<br>Bandsäge</small>"]
-    area2["<b><font color="purple" size="5px">Bereich<br>Elektronik</b><br><br><small>Lötkolben 1<br>Lötkolben 2</small>"]
+    area1["<b><font color="purple" size="5px">Bereich<br>Holzwerkstatt</b><br><br><small>Kreissäge<br>Bandsäge</small></font>"]
+    area2["<b><font color="purple" size="5px">Bereich<br>Elektronik</b><br><br><small>Lötkolben 1<br>Lötkolben 2</small></font>"]
 
-    area2_1["<b><font color="OrangeRed" size="5px">Unterbereich<br>3D-Druck</b><br><br><small>3D-Drucker 1<br>3D-Drucker 2</small>"]
-    area2_2["<b><font color="OrangeRed" size="5px">Unterbereich<br>Laser</b><br><br><small>Lasercutter 1<br>Lasercutter 2</small>"]
+    area2_1["<b><font color="OrangeRed" size="5px">Unterbereich<br>3D-Druck</b><br><br><small>3D-Drucker 1<br>3D-Drucker 2</small></font>"]
+    area2_2["<b><font color="OrangeRed" size="5px">Unterbereich<br>Laser</b><br><br><small>Lasercutter 1<br>Lasercutter 2</small></font>"]
 ```
 
 <br>
@@ -141,6 +141,7 @@ Dies sind die Eckdaten unserer erweiterten Werkstatt:
     | Benutzer Elektronik            | <ul><li>Lötkolben 1</li><li>Lötkolben 2</li></ul>                                            | Benutzer         |
     | Benutzer Elektronik - 3D-Druck | <ul><li>3D-Drucker 1</li><li>3D-Drucker 2</li></ul>                                          | Benutzer         |
     | Benutzer Elektronik - Laser    | <ul><li>Lasercutter 1</li><li>Lasercutter 2</li></ul>                                        | Benutzer         |
+    | Benutzer Siebdruck             | <ul><li>Belichtungsmaschine</li></ul>                                                        | Benutzer         |
     | Benutzer Druckernutzung        | <ul><li>Büro A4-Drucker</li><li>Elektronik A4-Drucker</li><li>Siebdruck A3-Drucker</li></ul> | Alternativrolle  |
     | Manager Holzwerkstatt          | <ul><li>Kreissäge</li><li>Bandsäge</li></ul>                                                 | Manager          |
     | Manager Elektronik             | <ul><li>Lötkolben 1</li><li>Lötkolben 2</li></ul>                                            | Manager          |
@@ -150,18 +151,21 @@ Dies sind die Eckdaten unserer erweiterten Werkstatt:
 === "CSV-Daten (Auszug)"
 
      | <font color="Blue">Name Domäne | <font color="purple">Name Bereich | <font color="OrangeRed">Name Unterbereich | Maschine/ Gerät       | Name Alternativrolle | Manager erstellen |
-     | ------------------------------------- | ---------------------------------------- | ------------------------------------------------ | --------------------- | -------------------- | ----------------- |
-     | Meine Werkstatt                       | Holzwerkstatt                            |                                                  | Bandsäge              |                      | x                 |
-     | Meine Werkstatt                       | Holzwerkstatt                            |                                                  | Kreissäge             |                      |                   |
-     | Meine Werkstatt                       | Elektronik                               |                                                  | Lötkolben 1           |                      | x                 |
-     | Meine Werkstatt                       | Elektronik                               |                                                  | Lötkolben 2           |                      |                   |
-     | Meine Werkstatt                       | Elektronik                               |                                                  | Elektronik A4-Drucker | Druckernutzung       |                   |
-     | Meine Werkstatt                       | Elektronik                               | 3D-Drucker                                       | 3D-Drucker 1          |                      |                   |
-     | Meine Werkstatt                       | Elektronik                               | 3D-Drucker                                       | 3D-Drucker 2          |                      |                   |
-     | Meine Werkstatt                       | Elektronik                               | Lasercutter                                      | Lasercutter 1         |                      | x                 |
-     | Meine Werkstatt                       | Elektronik                               | Lasercutter                                      | Lasercutter 2         |                      |                   |
-     | Meine Werkstatt                       | Büro                                     |                                                  | Büro A4-Drucker       | Druckernutzung       | x                 |
-     | Meine Werkstatt                       | Siebdruck                                |                                                  | Siebdruck A3-Drucker  | Druckernutzung       |                   |
+     | ------------------------------ | --------------------------------- | ----------------------------------------- | --------------------- | -------------------- | ----------------- |
+     | Meine Werkstatt                | Holzwerkstatt                     |                                           | Bandsäge              |                      | x                 |
+     | Meine Werkstatt                | Holzwerkstatt                     |                                           | Kreissäge             |                      |                   |
+     | Meine Werkstatt                | Elektronik                        |                                           | Lötkolben 1           |                      | x                 |
+     | Meine Werkstatt                | Elektronik                        |                                           | Lötkolben 2           |                      |                   |
+     | Meine Werkstatt                | Elektronik                        |                                           | Elektronik A4-Drucker | Druckernutzung       |                   |
+     | Meine Werkstatt                | Elektronik                        | 3D-Drucker                                | 3D-Drucker 1          |                      |                   |
+     | Meine Werkstatt                | Elektronik                        | 3D-Drucker                                | 3D-Drucker 2          |                      |                   |
+     | Meine Werkstatt                | Elektronik                        | Lasercutter                               | Lasercutter 1         |                      | x                 |
+     | Meine Werkstatt                | Elektronik                        | Lasercutter                               | Lasercutter 2         |                      |                   |
+     | Meine Werkstatt                | Siebdruck                         |                                           | Belichtungsmaschine   |                      |                   |
+     | Meine Werkstatt                | Siebdruck                         |                                           | Siebdruck A3-Drucker  | Druckernutzung       |                   |
+     | Meine Werkstatt                | Büro                              |                                           | Büro A4-Drucker       | Druckernutzung       | x                 |
+
+
 
     !!! info
 

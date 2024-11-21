@@ -52,7 +52,7 @@ Bei Bedarf kann ein Diagramm erzeugt werden, welche die Werkstatt mit allen Masc
 
 ### Liste aller Rollen
 
-Bei Bedarf kann eine Liste aller Rollen (inkl. deren interner IDs) erzeugt werden.
+Bei Bedarf kann eine Liste aller Rollen (plus interne IDs) erzeugt werden.
 
 - Die enstprechende Einstellung lautet `create_file_roles`.
 - Der Liste wird in der Datei `roles.csv` abgelegt.

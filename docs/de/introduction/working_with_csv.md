@@ -22,8 +22,8 @@ Um eine Maschine anzulegen werden Namen für die folgenden Elemente vergeben:
 
 Darüber hinaus werden für all diese Elemente auch IDs vergeben, die intern im FabAccess für die Bezeichnung der Maschinen/ Rollen verwendet. Auf diesem Wege werden zwei Welten abgedeckt:
 
-- In der FabAccess-App werden schöne, beschreibende Namen angezeigt. Dies macht unsere Nutzer glücklich, wenn sie die App nutzen.
-- In der FabAccess-Konfiguration werden kompakte IDs angezeigt, die schneller gelesen werden können. DIes macht unsere Administratoren glücklich, wenn sie etwas in der Konfiguration nachschauen.
+- Für die FabAccess-App können ausführliche und gut beschreibende Namen vergeben werden.
+- Für die FabAccess-Konfiguration könnten kompakte und schnell lesbare IDs vergeben werden.
 
 === "CSV-Daten (Auszug)"
 
