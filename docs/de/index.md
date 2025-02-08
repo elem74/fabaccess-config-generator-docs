@@ -2,15 +2,12 @@ Python-Skript zur automatische Generierung von Maschinen, Rollen, Aktoren und Ak
 
 ## Funktionsumfang
 
-
 - Generierung von Maschinen
 - Generierung von Rollen
 - Generierung von Aktoren
 - Generierung von einfachen Aktoren-Verbindungen
 - Export einer gesonderten Rollenliste (interne ID & Anzeigename der Rolle)
-- Abbildung der Struktur mittels Mermaid-Diagramm
-- Direkte Aktualisierung einer bestehenden bffh.dhall
-
+- Abbildung der Werkstattstruktur mittels Mermaid-Diagramm
 
 ## Beispieldaten
 === "CSV-Eingabedaten (Auszug)"

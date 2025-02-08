@@ -5,6 +5,49 @@
 - Die Datei `maschinenliste.csv` muss sich im selben Verzeichnis liegen wie das obige Python-Skript.
 - Alle erzeugten Daten werden im Unterordner `output` abgelegt.
 
+Standardgemäß werden die folgenden Dateien erzeugt:
+
+| Datei                                                                   | Inhalt                                                                                               |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| roles.dhall<br>machines.dhall<br>actors.dhall<br>actorconnections.dhall | DHALL-Dateien mit der erzeugten Konfiguration für Rollen, Maschinen, Aktoren und Aktorenverbindungen |
+| bffh-dhall-data.txt                                                     | Erzeugte Konfiguration in einer einzelnen Datei                                                      |
+| roles.csv                                                               | CSV-Datei mit einer Liste jeder Rolle (Klarname, FabAccess-ID)                                       |
+| mermaid-code.txt                                                        | Mermaid-Code für ein Werkstattdiagramm                                                               |
+
+
+### Automatisches Ablegen & Einbinden von DHALL-Dateien in FabAccess.
+
+Auf Wunsch können die DHALL-Dateien automatisch im FabAccess-Ordner abgelegt und in die Konfiguration eingebunden werden. Hierfür sind zwei Schritte notwendig:
+
+1. In der `settings.ini` bei der Einstellung `fa_dhall_directory` den Pfad hinterlegen, in dem sich die `bffh.dhall` befindet.
+2. Die Datei `bffh.dhall` vorbereiten.
+
+<br>
+**bffh.dhall vorbereiten**
+
+Die Einträge für roles, machines, actors und actor_connections müssen wie folgt aussehen:
+
+```
+roles = ./roles.dhall,
+machines = ./machines.dhall,
+actors = ./actors.dhall,
+actor_connections = ./actorconnections.dhall,
+```
+
+Beim Start von FabAccess werden die einzelnen dhall-Dateien dann automatisch in die Konfigruation geladen.
+
+
+!!! info
+    Ein Vorlage für eine entsprechend angepasste `bffh.dhall` befindet sich im Unterordner `docs` des FabAccess Config Generator.
+
+
+### CSV-Datei via Paramater festlegen
+
+Mit dem Parameter `file=` kann der Name einer CSV-Datei übergeben werden.
+
+**Beispiel**
+`python config-generator.py file=meinemaschinenliste.csv`
+
 
 ## Weitere Funktionen
 
@@ -18,41 +61,17 @@ Alle genannten Funktionen werden über die jeweiligen Einträge in der `settings
 
 Bei Bedarf können automatisch Manger-Rollen für die Domäne, Bereiche und Unterbereiche erzeugt werden.
 
-- Die entsprechenden Einstellungen lauten `manager_schichtleitung`, `manager_area`, `manager_subarea`
-
-
-### Automatische Aktualisierung einer bestehenden FabAccess-Konfiguration
-
-Bei Bedarf kann die `bffh.dhall` automatisch aktualisiert werden. Hierfür ist es notwendig die Datei mit Platzhaltern zu versehen.
-
-Dieser Vorgang funktioniert wie folgt:
-
-- Das Skript liest die `bffh.dhall` zeilenweise aus.
-- Dabei werden alle vom Skript erzeugten Daten werden zwischen den Platzhaltern `-- ||| GENERATOR START` und `-- ||| GENERATOR END` eingefügt. Bestehende Inhalte zwischen diesen Platzhaltern werden ignoriert.
-- Die Datei `bffh.dhall` wird am Ende vollständig neu geschrieben.
-
-<br>
-Ein Vorlage für eine entsprechend angepasste `bffh.dhall` befindet sich im Unterordner `docs` des FabAccess Config Generator.
+- Die entsprechenden Einstellungen lauten `manager_domain`, `manager_area`, `manager_subarea`
 
 
 !!! tip
 
     Backups anlegen verschafft Gelassenheit.
 
+### Vom Mermaid-Code zu einer Grafikdatei
 
-### Diagrammerstellung
+1. Mermaid-Code aus der Datei `mermaid-code.txt` kopieren.
+2. Die Website [mermaid.live](https://mermaid.live) aufrufen.
+3. Mermaid-Code links im Feld `code` einfügen
+4. Im Tab *Actions* das gewünschte Bildformat auswählen.
 
-Bei Bedarf kann ein Diagramm erzeugt werden, welche die Werkstatt mit allen Maschinen und Rollen abbildet. Hierbei wird zunächst nur Mermaid-Code für ein Diagramm erzeugt, welcher mit wenigen Schritten in ein Bild umgewandelt werden kann.
-
-- Die enstprechende Einstellung lautet `generate_mermaid`.
-- Der Mermaid-Code wird in der Datei `mermaid-code.txt` abgelegt.
-- Eine Bilddatei kann mittels [mermaid.live](https://mermaid.live) erzeugt.
-    1. Mermaid-Code links im Feld `code` einfügen
-    2. Links im Tab *Actions* das gewünschte Bildformat auswählen.
-
-### Liste aller Rollen
-
-Bei Bedarf kann eine Liste aller Rollen (plus interne IDs) erzeugt werden.
-
-- Die enstprechende Einstellung lautet `create_file_roles`.
-- Der Liste wird in der Datei `roles.csv` abgelegt.

@@ -6,7 +6,7 @@ Im Kapitel Grundlagen wurde die CSV bereits auszugsweise gezeigt. Hier der grund
 
 
 - Die CSV-Datei muss in einem bestimmten Format vorliegen. Es wird empfohlen eine Kopie der Beispieldatei anzulegen, um eine eigene Konfiguration zu erstellen.
-- Bei der Vergabe von internen IDs (siehe unten) sind nicht alle Zeichen zulässig, daher nimmt der Config Generator automatisch eine Umwandlung vor.
+- Bei der Vergabe von internen IDs für FabAccess (siehe unten) sind nicht alle Zeichen zulässig, daher nimmt der Config Generator automatisch eine Umwandlung vor.
 
 Konkrete Angaben zu beiden Punkten befinden sich im Referenzbereich "*CSV-Datei*".
 

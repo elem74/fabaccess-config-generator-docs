@@ -38,6 +38,6 @@
 - Alle übrigen Zeichen/ Sonderzeichen werden automatisch entfernt.
 
 ## Technische Spezifikation der CSV
-- Verwendetes CSV-Trennzeichen: `;`
+- Verwendetes CSV-Trennzeichen: Frei einstellbar, wird automatisch erkannt.
 - Kodierung: UTF-8-BOM
 - Zeilenumbrüche: CRLF

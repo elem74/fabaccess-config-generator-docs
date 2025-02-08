@@ -3,8 +3,13 @@ Verwendung mehrer Domänen. Es wird automatisch eine Manager-Rolle für jede Dom
 
 **Zulässige Werte**: True, False
 
-## manager_schichtleitung
-Rolle "Schichtleitung" erstellen, die über Manager-Berechtigungen für alle Domänen verfügt.                   
+##  domain_user
+Erstellung einer Benutzerrolle für die gesamte Werkstatt. (Es werden keine Benutzerrollen für Unterbereiche/ Bereiche erstellt)
+
+**Zulässige Werte**: True, False
+
+## manager_domain
+Manager-Rolle für die Domäne erstellen, die über Manager-Berechtigungen für alle Domänen verfügt.
 
 **Zulässige Werte**: True, False
 
@@ -18,15 +23,13 @@ Unterbereich Manager erstellen.
 
 **Zulässige Werte**: True, False
 
-## fa_update_dhall
-Automatische Aktualisierung einer bestehenden `bffh.dhall`-Datei.                                                   
+## fa_dhall_directory
+Definiert den Ordner, in dem die erzeugten DHALL-Dateien abgelegt werden. Wenn die Einstellung leer ist, dann werden die Dateien nur im Unterordner `output` abgelegt.
 
-**Zulässige Werte**: True, False
+Vollständiger Pfad zum Ordner, der die `bffh.dall` beinhaltet.
 
-## fa_dhall_file
-Vollständiger Pfad zur `bffh.dall`-Datei.
-
-**Zulässige Werte**: Text
+**Zulässige Werte**: Pfad als Text
+Standardwert: Kein Text
 
 Beispielwerte:
 
@@ -37,11 +40,6 @@ Beispielwerte:
 Mermaid-Code erzeugen, der Bereiche und Rolle in einem Diagramm abbildet.
 
 Ausgabe erfolgt in die Datei `mermaid-code.txt`. Der enthaltene Code kann auf [mermaid.live](https://mermaid.live/) eingefügt werden, um das Diagramm als Grafik zu speichern.
-
-**Zulässige Werte**: True, False
-
-## create_file_roles
-Ausgabe aller Rollen (Name der Rolle, Rollen-ID in FabAccess) als `roles.csv`.
 
 **Zulässige Werte**: True, False
 

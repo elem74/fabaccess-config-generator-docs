@@ -128,7 +128,7 @@ Dies sind die Eckdaten unserer erweiterten Werkstatt:
 
 - Die verschiedene Ordnungseinheiten/ Gewerke werden jeweils von einer Person verwaltet.
 - Im Bereich Elektronik gibt es zwei weitere Personen. Eine verwaltet ausschließlich die 3D-Drucker, die andere ausschließlich die Lasercutter. Hierfür gibt es Manager-Rollen für die jeweiligen Unterbereiche.
-- Unsere Werkstatt wird von verschiedenen Schichtleitern betreut. Hierfür gibt es eine Manager-Rolle, welche Maschinen/ Geräte in der gesamten Domäne "*Meine Werkstatt*" verwalten kann.
+- Unsere Werkstatt hat ein Schichtleiter-Modell, bei dem die Werkstatt an unterschiedlichen Tagen von unterschiedlichen Personen betreut wird. Diese Schichtleiter sind nicht die Werkstatteigentümer und erhalten eine Manager-Rolle, welche Maschinen/ Geräte in der gesamten Domäne "*Meine Werkstatt*" verwalten kann.
 
 
 === "Rollen"
@@ -136,7 +136,7 @@ Dies sind die Eckdaten unserer erweiterten Werkstatt:
     | Rolle                          | Zugriff auf Maschine/ Gerät                                                                  | Rollentyp        |
     | ------------------------------ | -------------------------------------------------------------------------------------------- | ---------------- |
     | Administrator                  |                                                                                              | Administrator    |
-    | Schichtleiter                  |                                                                                              | Manager (Domäne) |
+    | Manager Beispielwerkstatt      |                                                                                              | Manager (Domäne) |
     | Benutzer Holzwerkstatt         | <ul><li>Kreissäge</li><li>Bandsäge</li></ul>                                                 | Benutzer         |
     | Benutzer Elektronik            | <ul><li>Lötkolben 1</li><li>Lötkolben 2</li></ul>                                            | Benutzer         |
     | Benutzer Elektronik - 3D-Druck | <ul><li>3D-Drucker 1</li><li>3D-Drucker 2</li></ul>                                          | Benutzer         |
