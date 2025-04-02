@@ -10,6 +10,8 @@ Im Kapitel Grundlagen wurde die CSV bereits auszugsweise gezeigt. Hier der grund
 
 Konkrete Angaben zu beiden Punkten befinden sich im Referenzbereich "*CSV-Datei*".
 
+Bei Bedarf kann eine bestehende `bffh.dhall` importiert werden, siehe [hier](using_script.md#bestehende-bffhdhall-importieren-experimentell).
+
 
 ## Felder: Interne IDs
 Um eine Maschine anzulegen werden Namen für die folgenden Elemente vergeben:

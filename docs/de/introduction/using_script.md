@@ -1,7 +1,7 @@
 
 ## Ausführen des Config Generators
 
-- Der Config Generator wird mittels Python ausgeführt: `python config-generator.py`
+- Der Config Generator wird mittels Python ausgeführt: `python config-generator.py`.
 - Die Datei `maschinenliste.csv` muss sich im selben Verzeichnis liegen wie das obige Python-Skript.
 - Alle erzeugten Daten werden im Unterordner `output` abgelegt.
 
@@ -72,6 +72,12 @@ Bei Bedarf können automatisch Manger-Rollen für die Domäne, Bereiche und Unte
 
 1. Mermaid-Code aus der Datei `mermaid-code.txt` kopieren.
 2. Die Website [mermaid.live](https://mermaid.live) aufrufen.
-3. Mermaid-Code links im Feld `code` einfügen
+3. Mermaid-Code links im Feld `code` einfügen.
 4. Im Tab *Actions* das gewünschte Bildformat auswählen.
 
+
+## Bestehende bffh.dhall importieren (experimentell)
+
+- Die `bffh.dhall` muss im Verzeichnis des Skripts liegen.
+- Der Import erfolgt mittels des zusätzlichen Skripts: `python import-dhall.py`.
+- Die importieren Daten werden Ordner `output` als `importedresources.csv` abelegt.
