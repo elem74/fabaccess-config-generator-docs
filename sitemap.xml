@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>Noneindex.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Noneindex.html"/>
+    </url>
+    <url>
+        <loc>Noneintroduction/basics.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Noneintroduction/basics.html"/>
+    </url>
+    <url>
+        <loc>Noneintroduction/using_script.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Noneintroduction/using_script.html"/>
+    </url>
+    <url>
+        <loc>Noneintroduction/working_with_csv.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Noneintroduction/working_with_csv.html"/>
+    </url>
+    <url>
+        <loc>Nonereference/actors.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonereference/actors.html"/>
+    </url>
+    <url>
+        <loc>Nonereference/areas_roles.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonereference/areas_roles.html"/>
+    </url>
+    <url>
+        <loc>Nonereference/cli-parameter.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonereference/cli-parameter.html"/>
+    </url>
+    <url>
+        <loc>Nonereference/csv.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonereference/csv.html"/>
+    </url>
+    <url>
+        <loc>Nonereference/settings.html</loc>
+        <lastmod>2025-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonereference/settings.html"/>
+    </url>
+</urlset>
